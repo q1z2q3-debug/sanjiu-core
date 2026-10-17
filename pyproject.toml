@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sanjiu-core"
+version = "0.1.0"
+description = "三元九维符号体系形式层：3^9=19683 状态空间 · 平衡三态 · 错/综/互/变算子 · 校验"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+[tool.setuptools.packages.find]
+include = ["sanjiu_core*"]
+
+[tool.setuptools.package-data]
+sanjiu_core = ["manifests/*.json"]
