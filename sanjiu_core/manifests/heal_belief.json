@@ -1,0 +1,23 @@
+{
+  "name": "heal_belief",
+  "version": "0.1.0",
+  "space": 19683,
+  "state_alphabet": {
+    "-1": "隐/收",
+    "0": "衡/中",
+    "+1": "显/发"
+  },
+  "idx_convention": "g1_high",
+  "bit_weight_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "notes": "九维=体用变时空势因果缘; 三态trit{-1,0,+1}; 位权待核"
+}

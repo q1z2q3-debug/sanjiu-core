@@ -1,0 +1,23 @@
+{
+  "name": "hexq_prod",
+  "version": "0.1.0",
+  "space": 19683,
+  "state_alphabet": {
+    "-1": "阴",
+    "0": "和",
+    "+1": "阳"
+  },
+  "idx_convention": "g1_high",
+  "bit_weight_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "notes": "三进制逻辑门阴/和/阳; 另含π坐标/四象环; 位权待核"
+}
