@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: pytest (${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install . pytest
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Full manifest validation + bit-weight roundtrip
+        run: |
+          python - <<'PY'
+          import glob, json, sys
+          sys.path.insert(0, '.')
+          from sanjiu_core.validate import validate_manifest, to_core, from_core
+          from sanjiu_core import g_to_idx
+          fs = sorted(glob.glob('sanjiu_core/manifests/*.json'))
+          assert fs, 'no manifests'
+          n = 0
+          for f in fs:
+              m = json.load(open(f, encoding='utf-8'))
+              validate_manifest(m)                    # 抛错即 CI 红
+              for vec in [(0,)*9, (1,)*9, (-1,)*9]:
+                  assert from_core(to_core(vec, m), m) == vec
+              n += 1
+          print(f'OK: {n} manifests validated, bit-weight roundtrip green')
+          PY
