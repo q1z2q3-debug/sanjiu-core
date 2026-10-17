@@ -1,13 +1,13 @@
 {
-  "name": "meihua_yishu_app",
+  "name": "meihua-yishu-app",
   "version": "0.1.0",
   "space": 19683,
   "state_alphabet": {
-    "-1": "(-1)",
-    "0": "(0)",
-    "+1": "(+1)"
+    "-1": "气敛·宫弱·当止",
+    "0": "气枢·宫转·待定",
+    "+1": "气旺·宫动·当行"
   },
-  "idx_convention": "other",
+  "idx_convention": "g1_high",
   "bit_weight_map": [
     0,
     1,
@@ -19,5 +19,5 @@
     7,
     8
   ],
-  "notes": "三元=体/用/变(27格局), 九宫=洛书九宫×三态; 洛书位权→core待对齐; 结构需特判"
+  "notes": "核real: 洛书九宫序(坎坤震巽中乾兑艮离), 坎一最高位MSB; digit=trit+1; 中心态9841; 与core编码同构且位权恒等(FWD); 三元体/用/变是9宫3组投影(27格局)=语义自适配层,非每爻三态"
 }

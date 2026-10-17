@@ -1,13 +1,13 @@
 {
-  "name": "tri9_cog",
+  "name": "tri9-cog",
   "version": "0.1.0",
   "space": 19683,
   "state_alphabet": {
-    "-1": "C 因果",
-    "0": "S 空间",
-    "+1": "T 时间"
+    "-1": "digit 0(3态低位)",
+    "0": "digit 1(中和)",
+    "+1": "digit 2(3态高位)"
   },
-  "idx_convention": "other",
+  "idx_convention": "g1_high",
   "bit_weight_map": [
     0,
     1,
@@ -19,5 +19,5 @@
     7,
     8
   ],
-  "notes": "三元=Time/Space/Causality; 三态字面0/1/2; 维序与core对齐待核"
+  "notes": "核real: 三元=T时/S空/C因果各3维(T1T2T3 S1S2S3 C1C2C3); 编码=ΣT1*3^8+..C3*3^0 T1最高位; 三态字面0/1/2; 位权恒等=core"
 }

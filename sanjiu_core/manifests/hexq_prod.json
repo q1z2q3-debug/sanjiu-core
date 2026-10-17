@@ -1,5 +1,5 @@
 {
-  "name": "hexq_prod",
+  "name": "hexq-prod",
   "version": "0.1.0",
   "space": 19683,
   "state_alphabet": {
@@ -7,17 +7,17 @@
     "0": "和",
     "+1": "阳"
   },
-  "idx_convention": "g1_high",
+  "idx_convention": "other",
   "bit_weight_map": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
+    8,
     7,
-    8
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
   ],
-  "notes": "三进制逻辑门阴/和/阳; 另含π坐标/四象环; 位权待核"
+  "notes": "核real: 九维=体用变时空势因果缘; dims[0]最低位(3^0); idx 1-based(+1, 1..19683); 与core差偏移+1且位权反向(REV); 另含π坐标/四象环"
 }

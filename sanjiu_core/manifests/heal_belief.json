@@ -1,5 +1,5 @@
 {
-  "name": "heal_belief",
+  "name": "heal-belief",
   "version": "0.1.0",
   "space": 19683,
   "state_alphabet": {
@@ -7,17 +7,17 @@
     "0": "衡/中",
     "+1": "显/发"
   },
-  "idx_convention": "g1_high",
+  "idx_convention": "other",
   "bit_weight_map": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
+    8,
     7,
-    8
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
   ],
-  "notes": "九维=体用变时空势因果缘; 三态trit{-1,0,+1}; 位权待核"
+  "notes": "核real: 九维=体用变时空势因果缘(DIMENSION_NAMES); digit=trit+1; encode_state=Σdigit*3^k 位0(体)最低位; 与core位权反向(REV)"
 }
